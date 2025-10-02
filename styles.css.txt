@@ -1,0 +1,99 @@
+Not Effective
+
+/* styles.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.top-menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  transition: top 0.3s;
+  z-index: 1000;
+}
+
+main {
+  margin-top: 600px; /* Adjust for the height of the menu */
+  padding: 20px;
+}
+
+section {
+  height: 20px; /* For demonstration purposes */
+}
+
+/* ===== Variables ===== */
+:root {
+  --header-height: 60px; /* adjust to your header height */
+  --section-padding-bottom: 40px;
+  --section-spacing: 20px;
+}
+
+/* ===== Global ===== */
+html {
+  scroll-behavior: smooth; /* smooth scrolling for anchors */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding-top: var(--header-height); /* prevents content hiding under fixed header */
+}
+
+/* ===== Header / Navigation ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  color: #007bff; /* optional hover color */
+}
+
+/* ===== Sections ===== */
+section {
+  padding-top: calc(var(--header-height) + var(--section-spacing));
+  padding-bottom: var(--section-padding-bottom);
+  min-height: 100vh; /* each section fills viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid #eee; /* optional separation */
+}
+
+/* Optional: section background colors */
+#about { background: #f9f9f9; }
+#services { background: #fff; }
+#contact { background: #f9f9f9; }
+
