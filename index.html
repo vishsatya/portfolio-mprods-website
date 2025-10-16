@@ -159,56 +159,35 @@
     </style>
 </head>
 
-<!-- Scrolling Content Container -->
-<div class="overflow-hidden relative bg-slate-900 text-slate-100 min-h-screen">
+ <!-- Scrolling Content Container -->
+  <div class=" overflow-hidden relative">
 
-  <!-- Fade Overlay at Top -->
-  <div class="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-slate-900 to-transparent pointer-events-none z-10"></div>
+    <!-- Fade Overlay at Top -->
+    <div class="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-slate-900 to-transparent pointer-events-none"></div>
 
-  <!-- Fade Overlay at Bottom -->
-  <div class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-slate-900 to-transparent pointer-events-none z-10"></div>
+  <main class="max-w-6xl mx-auto px-6" >
+    <section class="grid grid-cols-1 md:grid-cols-2 items-center">
+      <!-- <div> --> 
 
-  <!-- Main Content -->
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 overflow-y-auto" style="max-height: 100vh;">
-    <section class="grid grid-cols-1 md:grid-cols-2 items-center gap-8 sm:gap-12 py-20 sm:py-32">
+      <div id="top" class="py-36">
+        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">We make films that move people.</h2> <BR>
+        <p class="mt-4 text-slate-300 max-w-xl">Feature-length dramas, documentary shorts, and premium branded content — from concept to post-production. We craft cinematic stories with emotional clarity and production precision.<BR><BR>
+Our films will align with our vision being emotionally powerful, cinematic, and deeply human.
 
-      <!-- Image (appears first on mobile) -->
-      <div class="order-1 md:order-2 rounded-xl overflow-hidden shadow-2xl bg-black/50 flex justify-center items-center">
-        <img 
-          alt="scene1" 
-          src="images/scene1.jpeg" 
-          class="w-full h-auto max-h-[60vh] md:max-h-[80vh] object-contain sm:object-cover transition-all duration-300"
-        />
-      </div>
-
-      <!-- Text Content -->
-      <div id="top" class="order-2 md:order-1">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
-          We make films that move people.
-        </h2>
-
-        <p class="mt-4 text-slate-300 text-base sm:text-lg leading-relaxed">
-          Feature-length dramas, documentary shorts, and premium branded content — from concept to post-production. 
-          We craft cinematic stories with emotional clarity and production precision.
-          <br><br>
-          Our films align with our vision: emotionally powerful, cinematic, and deeply human.
-        </p>
-
-        <div class="mt-6 flex flex-col sm:flex-row gap-4">
-          <a href="#work" class="inline-block px-6 py-3 bg-amber-500 text-black font-semibold rounded-lg shadow text-center">View Work</a>
-          <a href="#contact" class="inline-block px-6 py-3 border border-slate-700 rounded-lg text-slate-200 text-center">Get in touch</a>
+</p>
+        <div class="mt-6 flex gap-4">
+          <a href="#work" class="inline-block px-6 py-3 bg-amber-500 text-black font-semibold rounded-lg shadow">View Work</a>
+          <a href="#contact" class="inline-block px-6 py-3 border border-slate-700 rounded-lg text-slate-200">Get in touch</a>
         </div>
-
-        <ul class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-400 max-w-md">
-          <li><strong class="text-white">Clients</strong>: DeAnza, USC, Intel</li>
-          <li><strong class="text-white">Services</strong>: Production, Directing, Post, Color</li>
+        <ul class="mt-8 grid grid-cols-2 gap-4 text-sm text-slate-400 max-w-md">
+          <li><strong class="text-black">Clients</strong>: DeAnza, USC, Intel</li>
+          <li><strong class="text-green">Services</strong>: Production, Directing, Post, Color</li>
         </ul>
       </div>
-
+      <div class="rounded-xl overflow-hidden shadow-2xl bg-black/50 ml-8">
+        <img alt="scene1" src="images\scene1.jpeg" class="p-4 min-w-50 h-full object-cover" />
+      </div>
     </section>
-  </main>
-</div>
-
 <BR><BR><BR>
     <section id="work" class="py-36" >
       <h3 style="font-size: 24px;" class="text-4xl text-box font-bold ">Selected Work</h3>
@@ -394,8 +373,6 @@ ability to lead others has been widely respected for nearly four decades
 </div>
 
   <footer class="mt-12 border-t border-slate-800 py-8 text-center text-slate-400">
-  <!-- Fade Overlay at Bottom -->
-  <div class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-slate-900 to-transparent pointer-events-none z-10"></div>
     <div class="max-w-6xl mx-auto px-6">
       <p>© 2025 Manikyam Productions — Built for care.</p>
     </div>
