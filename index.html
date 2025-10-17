@@ -69,38 +69,39 @@
 
 <body class="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-gray-900 text-slate-100">
   <!-- Fixed Header -->
-  <header class="fixed top-0 left-0 w-full z-50 bg-slate-900 shadow-lg top-menu">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-4">
+  <header class="fixed top-0 left-0 w-full z-50 bg-slate-900 shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between">
+      
+      <!-- Logo and Title -->
+      <div class="flex items-center gap-4 flex-wrap">
         <!-- Logo -->
         <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center font-bold text-xl font-[Calibri]">
-          <span class="bg-gradient-to-r from-blue-400 to-red-500 bg-clip-text text-transparent">
-            MP
-          </span>
+          <span class="bg-gradient-to-r from-blue-400 to-red-500 bg-clip-text text-transparent">MP</span>
         </div>
-        <!-- Title -->
-        <h3 class="text-xs font-bold fantasy-script pt-4">
-          Manikyam Productions
-          <p class="text-xl text-slate-300" style="color: royalblue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Story-led film production & creative direction</p>
-        </h1>
+
+        <!-- Title and Tagline -->
+        <div class="flex flex-col">
+          <h1 class="text-base font-bold fantasy-script">Manikyam Productions</h1>
+          <p class="text-sm text-slate-300" style="color: royalblue;">Story-led film production & creative direction</p>
+        </div>
       </div>
-      <!-- Desktop Nav -->
+
+      <!-- Navigation -->
       <nav class="hidden md:flex gap-6 text-slate-300">
-        <p style="color: red;">
-        <a href="#top" class="hover:text-white color:blue">Home</a></p>
-        <p style="color: red;">
-        <a href="#work" class="hover:text-white color:blue">Work</a></p>
-        <p style="color: red;">
+        <a href="#top" class="hover:text-white">Home</a>
+        <a href="#work" class="hover:text-white">Work</a>
         <a href="#about" class="hover:text-white">About</a>
-        <p style="color: red;">
         <a href="#team" class="hover:text-white">Team</a>
-        <p style="color: red;">
         <a href="#contact" class="hover:text-white">Contact</a>
       </nav>
+
       <!-- Mobile Menu Icon -->
-      <div class="md:hidden text-slate-300">☰</div>
+      <div class="md:hidden text-slate-300 text-2xl">
+        ☰
+      </div>
     </div>
   </header>
+</body>
 
 <head>
   <meta charset="UTF-8">
