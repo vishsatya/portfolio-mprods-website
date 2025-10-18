@@ -98,14 +98,13 @@
       </nav>
     </div>
 <!-- Mobile Nav -->
-  <nav id="mobile-menu" class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out flex-col items-start px-4 pb-4 text-red-500 space-y-2">
-    <a href="#top" class="hover:text-white">Home</a>
-    <a href="#work" class="hover:text-white">Work</a>
-    <a href="#about" class="hover:text-white">About</a>
-    <a href="#team" class="hover:text-white">Team</a>
-    <a href="#contact" class="hover:text-white">Contact</a>
-  </nav>
-</header>
+<nav id="mobile-menu" class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out flex-col text-red-500 space-y-2 px-4">
+  <a href="#top" class="hover:text-white">Home</a>
+  <a href="#work" class="hover:text-white">Work</a>
+  <a href="#about" class="hover:text-white">About</a>
+  <a href="#team" class="hover:text-white">Team</a>
+  <a href="#contact" class="hover:text-white">Contact</a>
+</nav>
 
 <script>
   const toggle = document.getElementById('menu-toggle');
@@ -114,11 +113,15 @@
 
   toggle.addEventListener('click', () => {
     menuOpen = !menuOpen;
-    menu.style.maxHeight = menuOpen ? menu.scrollHeight + "px" : "0";
-    toggle.textContent = menuOpen ? "✕" : "☰";
+    if (menuOpen) {
+      menu.style.maxHeight = menu.scrollHeight + "px";
+      toggle.textContent = "✕";
+    } else {
+      menu.style.maxHeight = "0";
+      toggle.textContent = "☰";
+    }
   });
 </script>
-
 </body>
 
 <head>
