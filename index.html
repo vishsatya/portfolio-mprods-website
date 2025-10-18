@@ -97,24 +97,28 @@
         <a href="#contact" class="hover:text-white">Contact</a>
       </nav>
     </div>
+<!-- Mobile Nav -->
+  <nav id="mobile-menu" class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out flex-col items-start px-4 pb-4 text-red-500 space-y-2">
+    <a href="#top" class="hover:text-white">Home</a>
+    <a href="#work" class="hover:text-white">Work</a>
+    <a href="#about" class="hover:text-white">About</a>
+    <a href="#team" class="hover:text-white">Team</a>
+    <a href="#contact" class="hover:text-white">Contact</a>
+  </nav>
+</header>
 
-    <!-- Mobile Nav -->
-    <nav id="mobile-menu" class="md:hidden hidden flex-col items-start px-4 pb-4 text-red-500 drop-shadow-md space-y-2">
-      <a href="#top" class="hover:text-white">Home</a>
-      <a href="#work" class="hover:text-white">Work</a>
-      <a href="#about" class="hover:text-white">About</a>
-      <a href="#team" class="hover:text-white">Team</a>
-      <a href="#contact" class="hover:text-white">Contact</a>
-    </nav>
-  </header>
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  let menuOpen = false;
 
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('mobile-menu');
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-  </script>
+  toggle.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    menu.style.maxHeight = menuOpen ? menu.scrollHeight + "px" : "0";
+    toggle.textContent = menuOpen ? "✕" : "☰";
+  });
+</script>
+
 </body>
 
 <head>
