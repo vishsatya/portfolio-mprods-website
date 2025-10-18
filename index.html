@@ -67,39 +67,54 @@
 </head>
 
 <body class="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-gray-900 text-slate-100">
-  <!-- Fixed Header -->
-  <header class="fixed top-0 left-0 w-full z-50 bg-black bg-slate-900 shadow-lg">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between">
+  <header class="fixed top-0 left-0 w-full z-50 bg-black shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
       
       <!-- Logo and Title -->
       <div class="flex items-center gap-4 flex-wrap">
-        <!-- Logo -->
-        <div class="w-12 h-12 bg-black/10 rounded-lg flex items-center justify-center font-bold text-xl font-[Calibri]">
+        <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center font-bold text-xl font-[Calibri]">
           <span class="bg-gradient-to-r from-blue-400 to-red-500 bg-clip-text text-transparent">MP</span>
         </div>
-
-        <!-- Title and Tagline -->
         <div class="flex flex-col">
-          <h1 class="text-3xl md:text-5xl font-bold fantasy-script">Manikyam Productions</h1>
-          <p class="text-sm text-slate-300" style="color: royalblue;">Story-led film production & creative direction</p>
+          <h1 class="text-2xl md:text-3xl font-bold fantasy-script">Manikyam Productions</h1>
+          <p class="text-sm md:text-base text-slate-300" style="color: royalblue;">
+            Story-led film production & creative direction
+          </p>
         </div>
       </div>
 
-      <!-- Navigation -->
-      <nav class="hidden md:flex gap-6 text-red-500 text-slate-300">
+      <!-- Mobile Menu Icon -->
+      <button id="menu-toggle" class="md:hidden text-red-500 text-2xl focus:outline-none">
+        ☰
+      </button>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex gap-6 text-red-500">
         <a href="#top" class="hover:text-white">Home</a>
         <a href="#work" class="hover:text-white">Work</a>
         <a href="#about" class="hover:text-white">About</a>
         <a href="#team" class="hover:text-white">Team</a>
         <a href="#contact" class="hover:text-white">Contact</a>
       </nav>
-
-      <!-- Mobile Menu Icon -->
-      <div class="md:hidden text-slate-300 text-2xl">
-        ☰
-      </div>
     </div>
+
+    <!-- Mobile Nav -->
+    <nav id="mobile-menu" class="md:hidden hidden flex-col items-start px-4 pb-4 text-red-500 space-y-2">
+      <a href="#top" class="hover:text-white">Home</a>
+      <a href="#work" class="hover:text-white">Work</a>
+      <a href="#about" class="hover:text-white">About</a>
+      <a href="#team" class="hover:text-white">Team</a>
+      <a href="#contact" class="hover:text-white">Contact</a>
+    </nav>
   </header>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 
 <head>
