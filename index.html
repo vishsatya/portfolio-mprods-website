@@ -133,8 +133,12 @@
     while (--index >= 0) {
       const sectionTop = sections[index].offsetTop;
       if (window.scrollY + 100 >= sectionTop) {
-        navLinks.forEach(link => link.classList.remove("font-bold", "underline", "text-white"));
-        navLinks[index].classList.add("font-bold", "underline", "text-white");
+        navLinks.forEach(link => {
+          link.classList.remove("text-white", "font-bold", "underline");
+          link.classList.add("text-red-500");
+        });
+        navLinks[index].classList.remove("text-red-500");
+        navLinks[index].classList.add("text-white", "font-bold", "underline");
         break;
       }
     }
@@ -232,10 +236,7 @@ Our films will align with our vision being emotionally powerful, cinematic, and 
     />
   </div>
 </section>
-
-
-
-    </section>
+   <!-- </section> -->
 <BR><BR><BR>
     <section id="work" class="py-36" >
       <h3 style="font-size: 24px;" class="text-4xl text-box font-bold ">Selected Work</h3>
