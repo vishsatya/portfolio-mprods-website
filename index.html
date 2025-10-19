@@ -124,33 +124,35 @@
   });
 </script>
 <script>
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".nav-link");
+  // Select all nav links
+  const navLinks = document.querySelectorAll('.nav-link');
 
-  function activateLink() {
-    let currentSection = null;
-
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      if (window.scrollY + 100 >= sectionTop) {
-        currentSection = section.getAttribute("id");
-      }
+  // Click-based active state
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.forEach(l => l.classList.remove('border-white', 'text-white'));
+      link.classList.add('border-white', 'text-white');
     });
+  });
+
+  // (Optional) Active link on scroll
+  window.addEventListener('scroll', () => {
+    let fromTop = window.scrollY + 100;
 
     navLinks.forEach(link => {
-      const href = link.getAttribute("href").replace("#", "");
-      if (href === currentSection) {
-        link.classList.add("text-white", "font-bold", "underline");
-        link.classList.remove("text-red-500");
+      const section = document.querySelector(link.hash);
+      if (
+        section.offsetTop <= fromTop &&
+        section.offsetTop + section.offsetHeight > fromTop
+      ) {
+        link.classList.add('border-white', 'text-white');
       } else {
-        link.classList.remove("text-white", "font-bold", "underline");
-        link.classList.add("text-red-500");
+        link.classList.remove('border-white', 'text-white');
       }
     });
-  }
-
-  window.addEventListener("scroll", activateLink);
+  });
 </script>
+
 </body>
 
 <head>
