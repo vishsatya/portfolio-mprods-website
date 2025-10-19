@@ -128,21 +128,29 @@
   const navLinks = document.querySelectorAll(".nav-link");
 
   function activateLink() {
-    let index = sections.length;
+    let currentSection = null;
 
-    while (--index >= 0) {
-      const sectionTop = sections[index].offsetTop;
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
       if (window.scrollY + 100 >= sectionTop) {
-        navLinks.forEach(link => {
-          link.classList.remove("text-white", "font-bold", "underline");
-          link.classList.add("text-red-500");
-        });
-        navLinks[index].classList.remove("text-red-500");
-        navLinks[index].classList.add("text-white", "font-bold", "underline");
-        break;
+        currentSection = section.getAttribute("id");
       }
-    }
+    });
+
+    navLinks.forEach(link => {
+      const href = link.getAttribute("href").replace("#", "");
+      if (href === currentSection) {
+        link.classList.add("text-white", "font-bold", "underline");
+        link.classList.remove("text-red-500");
+      } else {
+        link.classList.remove("text-white", "font-bold", "underline");
+        link.classList.add("text-red-500");
+      }
+    });
   }
+
+  window.addEventListener("scroll", activateLink);
+</script>
 
   window.addEventListener("scroll", activateLink);
 </script>
